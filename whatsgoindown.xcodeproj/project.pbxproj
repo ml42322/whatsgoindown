@@ -9,25 +9,29 @@
 /* Begin PBXBuildFile section */
 		0FC7F314BE8D9F18431D8269 /* Pods_whatsgoindown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536427CFA05E10CEF9FFB772 /* Pods_whatsgoindown.framework */; };
 		422BF506207316BF00AF6E7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BF505207316BF00AF6E7B /* AppDelegate.swift */; };
-		422BF508207316BF00AF6E7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BF507207316BF00AF6E7B /* ViewController.swift */; };
 		422BF50B207316BF00AF6E7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422BF509207316BF00AF6E7B /* Main.storyboard */; };
 		422BF50E207316BF00AF6E7B /* whatsgoindown.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 422BF50C207316BF00AF6E7B /* whatsgoindown.xcdatamodeld */; };
 		422BF510207316C100AF6E7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 422BF50F207316C100AF6E7B /* Assets.xcassets */; };
 		422BF513207316C100AF6E7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422BF511207316C100AF6E7B /* LaunchScreen.storyboard */; };
 		422BF51B2073178000AF6E7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 422BF51A2073177F00AF6E7B /* GoogleService-Info.plist */; };
+		422BF525207320BF00AF6E7B /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BF524207320BF00AF6E7B /* CreateEventViewController.swift */; };
+		422BF5272073219B00AF6E7B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BF5262073219B00AF6E7B /* Event.swift */; };
+		422BF529207321F400AF6E7B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BF528207321F400AF6E7B /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C5CBBFA3739F13D6AD24D04 /* Pods-whatsgoindown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsgoindown.release.xcconfig"; path = "Pods/Target Support Files/Pods-whatsgoindown/Pods-whatsgoindown.release.xcconfig"; sourceTree = "<group>"; };
 		422BF502207316BF00AF6E7B /* whatsgoindown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatsgoindown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		422BF505207316BF00AF6E7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		422BF507207316BF00AF6E7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		422BF50A207316BF00AF6E7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		422BF50D207316BF00AF6E7B /* whatsgoindown.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = whatsgoindown.xcdatamodel; sourceTree = "<group>"; };
 		422BF50F207316C100AF6E7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		422BF512207316C100AF6E7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		422BF514207316C100AF6E7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		422BF51A2073177F00AF6E7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		422BF524207320BF00AF6E7B /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		422BF5262073219B00AF6E7B /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		422BF528207321F400AF6E7B /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		536427CFA05E10CEF9FFB772 /* Pods_whatsgoindown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whatsgoindown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4568B405E16077B0070F75 /* Pods-whatsgoindown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsgoindown.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whatsgoindown/Pods-whatsgoindown.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,9 +69,11 @@
 		422BF504207316BF00AF6E7B /* whatsgoindown */ = {
 			isa = PBXGroup;
 			children = (
-				422BF505207316BF00AF6E7B /* AppDelegate.swift */,
-				422BF507207316BF00AF6E7B /* ViewController.swift */,
 				422BF509207316BF00AF6E7B /* Main.storyboard */,
+				422BF505207316BF00AF6E7B /* AppDelegate.swift */,
+				422BF528207321F400AF6E7B /* DataStore.swift */,
+				422BF5262073219B00AF6E7B /* Event.swift */,
+				422BF524207320BF00AF6E7B /* CreateEventViewController.swift */,
 				422BF50F207316C100AF6E7B /* Assets.xcassets */,
 				422BF511207316C100AF6E7B /* LaunchScreen.storyboard */,
 				422BF514207316C100AF6E7B /* Info.plist */,
@@ -227,9 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				422BF508207316BF00AF6E7B /* ViewController.swift in Sources */,
+				422BF5272073219B00AF6E7B /* Event.swift in Sources */,
 				422BF506207316BF00AF6E7B /* AppDelegate.swift in Sources */,
 				422BF50E207316BF00AF6E7B /* whatsgoindown.xcdatamodeld in Sources */,
+				422BF529207321F400AF6E7B /* DataStore.swift in Sources */,
+				422BF525207320BF00AF6E7B /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +385,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RZD6T59B7Q;
 				INFOPLIST_FILE = whatsgoindown/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wilshireliu.whatsgoindown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -393,7 +404,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RZD6T59B7Q;
 				INFOPLIST_FILE = whatsgoindown/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wilshireliu.whatsgoindown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
