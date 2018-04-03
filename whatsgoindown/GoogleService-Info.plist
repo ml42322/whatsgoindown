@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>593518654724-3453dgaasl1b3hca69mcdfcuh6h5lj6c.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.593518654724-3453dgaasl1b3hca69mcdfcuh6h5lj6c</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB33mzsxkNU837JHPlg819MXLOzN83FnrM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>593518654724</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.wilshireliu.whatsgoindown</string>
+	<key>PROJECT_ID</key>
+	<string>whatsgoindown-7ac58</string>
+	<key>STORAGE_BUCKET</key>
+	<string>whatsgoindown-7ac58.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:593518654724:ios:dac1d4a28d70536c</string>
+	<key>DATABASE_URL</key>
+	<string>https://whatsgoindown-7ac58.firebaseio.com</string>
+</dict>
+</plist>
