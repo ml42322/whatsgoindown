@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import FirebaseAuth
 
 class DataStore {
     
@@ -51,9 +52,12 @@ class DataStore {
                     let eventHost = event["eventHost"]
                     let eventAddress = event["eventAddress"]
                     let eventTime = event["eventTime"]
+                    let eventTimeZone = event["eventTimeZone"]
                     let eventType = event["eventType"]
                     let eventDescription = event["eventDescription"]
-                    let newEvent = Event(id: id, eventName: eventName!, eventHost: eventHost!, eventAddress: eventAddress!, eventTime: eventTime!, eventType: eventType!, eventDescription: eventDescription!)
+                    let eventLongitude = event["eventLongitude"]
+                    let eventLatitude = event["eventLatitude"]
+                    let newEvent = Event(id: id, eventName: eventName!, eventHost: eventHost!, eventAddress: eventAddress!, eventTime: eventTime!, eventTimeZone: eventTimeZone!, eventType: eventType!, eventDescription: eventDescription!, eventLongitude: eventLongitude!, eventLatitude: eventLatitude!)
                     self.events.append(newEvent)
                 }
             }
@@ -71,8 +75,11 @@ class DataStore {
             "eventHost": event.eventHost,
             "eventAddress": event.eventAddress,
             "eventTime": event.eventTime,
+            "eventTimeZone": event.eventTimeZone,
             "eventType": event.eventType,
-            "eventDescription": event.eventDescription
+            "eventDescription": event.eventDescription,
+            "eventLongitude": event.eventLongitude,
+            "eventLatitude": event.eventLatitude
         ]
         
         // Save to Firebase.
