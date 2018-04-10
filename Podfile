@@ -8,5 +8,6 @@ target 'whatsgoindown' do
   # Pods for whatsgoindown
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Auth'
 
 end

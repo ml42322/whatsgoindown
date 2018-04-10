@@ -17,6 +17,8 @@
 		422BF525207320BF00AF6E7B /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BF524207320BF00AF6E7B /* CreateEventViewController.swift */; };
 		422BF5272073219B00AF6E7B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BF5262073219B00AF6E7B /* Event.swift */; };
 		422BF529207321F400AF6E7B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BF528207321F400AF6E7B /* DataStore.swift */; };
+		4272DF59207C712500A852B9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4272DF58207C712500A852B9 /* RegisterViewController.swift */; };
+		4272DF5B207C713000A852B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4272DF5A207C713000A852B9 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		422BF524207320BF00AF6E7B /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		422BF5262073219B00AF6E7B /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		422BF528207321F400AF6E7B /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		4272DF58207C712500A852B9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4272DF5A207C713000A852B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		536427CFA05E10CEF9FFB772 /* Pods_whatsgoindown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whatsgoindown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4568B405E16077B0070F75 /* Pods-whatsgoindown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsgoindown.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whatsgoindown/Pods-whatsgoindown.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,12 +74,14 @@
 			isa = PBXGroup;
 			children = (
 				422BF509207316BF00AF6E7B /* Main.storyboard */,
+				422BF511207316C100AF6E7B /* LaunchScreen.storyboard */,
 				422BF505207316BF00AF6E7B /* AppDelegate.swift */,
 				422BF528207321F400AF6E7B /* DataStore.swift */,
 				422BF5262073219B00AF6E7B /* Event.swift */,
+				4272DF58207C712500A852B9 /* RegisterViewController.swift */,
+				4272DF5A207C713000A852B9 /* LoginViewController.swift */,
 				422BF524207320BF00AF6E7B /* CreateEventViewController.swift */,
 				422BF50F207316C100AF6E7B /* Assets.xcassets */,
-				422BF511207316C100AF6E7B /* LaunchScreen.storyboard */,
 				422BF514207316C100AF6E7B /* Info.plist */,
 				422BF50C207316BF00AF6E7B /* whatsgoindown.xcdatamodeld */,
 				422BF51A2073177F00AF6E7B /* GoogleService-Info.plist */,
@@ -178,12 +184,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-whatsgoindown/Pods-whatsgoindown-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -233,9 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4272DF5B207C713000A852B9 /* LoginViewController.swift in Sources */,
 				422BF5272073219B00AF6E7B /* Event.swift in Sources */,
 				422BF506207316BF00AF6E7B /* AppDelegate.swift in Sources */,
 				422BF50E207316BF00AF6E7B /* whatsgoindown.xcdatamodeld in Sources */,
+				4272DF59207C712500A852B9 /* RegisterViewController.swift in Sources */,
 				422BF529207321F400AF6E7B /* DataStore.swift in Sources */,
 				422BF525207320BF00AF6E7B /* CreateEventViewController.swift in Sources */,
 			);
