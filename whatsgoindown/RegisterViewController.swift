@@ -33,6 +33,10 @@ class RegisterViewController: UIViewController {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if error == nil && user != nil {
                 print("User Created!")
+                let alert = UIAlertController(title: "", message: "Account Created", preferredStyle: UIAlertControllerStyle.alert)
+                let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+                alert.addAction(OKAction)
+                self.present(alert, animated: true, completion: nil)
             }
             else {
                 print("Error creating user: \(error!)")

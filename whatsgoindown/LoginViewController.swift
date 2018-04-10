@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
         
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error == nil && user != nil {
-                print("Signed In")
+                print("Logged In")
                 self.performSegue(withIdentifier: "postLogin", sender: self)
             }
             else {

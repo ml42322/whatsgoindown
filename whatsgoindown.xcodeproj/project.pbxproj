@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0FC7F314BE8D9F18431D8269 /* Pods_whatsgoindown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536427CFA05E10CEF9FFB772 /* Pods_whatsgoindown.framework */; };
+		421FB554207D38E100D68418 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FB553207D38E100D68418 /* MainScreenViewController.swift */; };
+		421FB556207D3AED00D68418 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FB555207D3AED00D68418 /* SettingsViewController.swift */; };
 		422BF506207316BF00AF6E7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BF505207316BF00AF6E7B /* AppDelegate.swift */; };
 		422BF50B207316BF00AF6E7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422BF509207316BF00AF6E7B /* Main.storyboard */; };
 		422BF50E207316BF00AF6E7B /* whatsgoindown.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 422BF50C207316BF00AF6E7B /* whatsgoindown.xcdatamodeld */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		1C5CBBFA3739F13D6AD24D04 /* Pods-whatsgoindown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsgoindown.release.xcconfig"; path = "Pods/Target Support Files/Pods-whatsgoindown/Pods-whatsgoindown.release.xcconfig"; sourceTree = "<group>"; };
+		421FB553207D38E100D68418 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		421FB555207D3AED00D68418 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		422BF502207316BF00AF6E7B /* whatsgoindown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatsgoindown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		422BF505207316BF00AF6E7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		422BF50A207316BF00AF6E7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				422BF505207316BF00AF6E7B /* AppDelegate.swift */,
 				422BF528207321F400AF6E7B /* DataStore.swift */,
 				422BF5262073219B00AF6E7B /* Event.swift */,
+				421FB553207D38E100D68418 /* MainScreenViewController.swift */,
+				421FB555207D3AED00D68418 /* SettingsViewController.swift */,
 				4272DF58207C712500A852B9 /* RegisterViewController.swift */,
 				4272DF5A207C713000A852B9 /* LoginViewController.swift */,
 				422BF524207320BF00AF6E7B /* CreateEventViewController.swift */,
@@ -246,8 +252,10 @@
 				422BF506207316BF00AF6E7B /* AppDelegate.swift in Sources */,
 				422BF50E207316BF00AF6E7B /* whatsgoindown.xcdatamodeld in Sources */,
 				4272DF59207C712500A852B9 /* RegisterViewController.swift in Sources */,
+				421FB554207D38E100D68418 /* MainScreenViewController.swift in Sources */,
 				422BF529207321F400AF6E7B /* DataStore.swift in Sources */,
 				422BF525207320BF00AF6E7B /* CreateEventViewController.swift in Sources */,
+				421FB556207D3AED00D68418 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
