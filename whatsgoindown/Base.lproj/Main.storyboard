@@ -454,17 +454,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bh9-Nf-2I1">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bh9-Nf-2I1">
+                                <rect key="frame" x="0.0" y="127" width="375" height="540"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odX-3M-Eqv">
+                                <rect key="frame" x="170" y="48" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="yr7-Fb-BAJ" kind="show" id="FaY-5x-q4p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="bh9-Nf-2I1" firstAttribute="bottom" secondItem="3aB-IQ-6wE" secondAttribute="bottom" id="MzF-VE-FM9"/>
-                            <constraint firstItem="bh9-Nf-2I1" firstAttribute="leading" secondItem="3aB-IQ-6wE" secondAttribute="leading" id="dBH-7x-1K5"/>
-                            <constraint firstItem="bh9-Nf-2I1" firstAttribute="top" secondItem="3aB-IQ-6wE" secondAttribute="top" id="dOa-sy-bAX"/>
-                            <constraint firstItem="bh9-Nf-2I1" firstAttribute="trailing" secondItem="3aB-IQ-6wE" secondAttribute="trailing" id="qT5-p0-Y3C"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3aB-IQ-6wE"/>
                     </view>
                     <connections>
@@ -535,7 +538,7 @@
         <image name="2" width="678" height="308"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dhZ-Z2-3aq"/>
-        <segue reference="F1D-9V-vnz"/>
+        <segue reference="FaY-5x-q4p"/>
+        <segue reference="S14-mb-pHV"/>
     </inferredMetricsTieBreakers>
 </document>
