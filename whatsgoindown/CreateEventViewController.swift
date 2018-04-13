@@ -14,11 +14,49 @@ class CreateEventViewController: UIViewController {
 
     @IBOutlet weak var eventNameText: UITextField!
     @IBOutlet weak var eventAddressText: UITextField!
-    @IBOutlet weak var eventTimeText: UITextField!
-    @IBOutlet weak var eventTimeZoneText: UITextField!
+    @IBOutlet weak var startDatePicker: UIDatePicker!
+    @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var eventTypeText: UITextField!
     @IBOutlet weak var eventDescriptionText: UITextField!
     @IBOutlet weak var lblMessage: UILabel!
+    
+    var startDate: String?
+    var endDate: String?
+    
+    @IBAction func startDateAction(_ sender: Any) {
+        let string = handleDatePicker(date: startDatePicker)
+        print(string)
+    }
+    
+    @IBAction func endDateAction(_ sender: Any) {
+        let string = handleDatePicker(date: endDatePicker)
+        print(string)
+    }
+    
+    func handleDatePicker(date: UIDatePicker) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let string = dateFormatter.string(from: date.date)
+        return string
+    }
+    
+    @IBAction func btnCreateEvent(_ sender: Any) {
+        let user = Auth.auth().currentUser
+        if let user = user {
+            let email = user.email
+            
+            startDate = handleDatePicker(date: startDatePicker)
+            endDate = handleDatePicker(date: endDatePicker)
+            
+            let event = Event(id: "", eventName: eventNameText.text!, eventHost: email!.description, eventAddress: eventAddressText.text!, eventStartDate: startDate!, eventEndDate: endDate!, eventType: eventTypeText.text!, eventDescription: eventDescriptionText.text!, eventLongitude: "TBD", eventLatitude: "TBD")
+            DataStore.shared.addEvent(event: event)
+        }
+        print("Event Added")
+        lblMessage.text = "Event added!"
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,23 +65,14 @@ class CreateEventViewController: UIViewController {
             let email = user.email
             lblMessage.text = "Signed in as \(email!.description)"
         }
-        // Do any additional setup after loading the view.
+        let currentDate = NSDate()
+        self.startDatePicker.minimumDate = currentDate as Date
+        self.endDatePicker.minimumDate = currentDate as Date
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func btnCreateEvent(_ sender: Any) {
-        let user = Auth.auth().currentUser
-        if let user = user {
-            let email = user.email
-            let event = Event(id: "", eventName: eventNameText.text!, eventHost: email!.description, eventAddress: eventAddressText.text!, eventTime: eventTimeText.text!, eventTimeZone: eventTimeZoneText.text!, eventType: eventTypeText.text!, eventDescription: eventDescriptionText.text!, eventLongitude: "TBD", eventLatitude: "TBD")
-            DataStore.shared.addEvent(event: event)
-        }
-        print("Event Added")
-        lblMessage.text = "Event Added!"
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

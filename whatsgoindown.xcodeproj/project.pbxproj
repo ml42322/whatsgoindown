@@ -19,10 +19,11 @@
 		422BF525207320BF00AF6E7B /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BF524207320BF00AF6E7B /* CreateEventViewController.swift */; };
 		422BF5272073219B00AF6E7B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BF5262073219B00AF6E7B /* Event.swift */; };
 		422BF529207321F400AF6E7B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BF528207321F400AF6E7B /* DataStore.swift */; };
-		423030EF207EB24800B13CA4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423030EE207EB24800B13CA4 /* MapViewController.swift */; };
 		4272DF59207C712500A852B9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4272DF58207C712500A852B9 /* RegisterViewController.swift */; };
 		4272DF5B207C713000A852B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4272DF5A207C713000A852B9 /* LoginViewController.swift */; };
 		42ADDFB1207D6BF300FAFFF6 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADDFB0207D6BF300FAFFF6 /* EventsViewController.swift */; };
+		42CC55AF207D7F390077E72C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC55AE207D7F390077E72C /* MapViewController.swift */; };
+		D9098FBB207F258C00BF8654 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9098FBA207F258C00BF8654 /* EventDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,12 +41,13 @@
 		422BF524207320BF00AF6E7B /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		422BF5262073219B00AF6E7B /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		422BF528207321F400AF6E7B /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		423030EE207EB24800B13CA4 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4272DF58207C712500A852B9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4272DF5A207C713000A852B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		42ADDFB0207D6BF300FAFFF6 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		42CC55AE207D7F390077E72C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		536427CFA05E10CEF9FFB772 /* Pods_whatsgoindown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whatsgoindown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4568B405E16077B0070F75 /* Pods-whatsgoindown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsgoindown.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whatsgoindown/Pods-whatsgoindown.debug.xcconfig"; sourceTree = "<group>"; };
+		D9098FBA207F258C00BF8654 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +94,12 @@
 				4272DF5A207C713000A852B9 /* LoginViewController.swift */,
 				422BF524207320BF00AF6E7B /* CreateEventViewController.swift */,
 				42ADDFB0207D6BF300FAFFF6 /* EventsViewController.swift */,
-				423030EE207EB24800B13CA4 /* MapViewController.swift */,
+				42CC55AE207D7F390077E72C /* MapViewController.swift */,
 				422BF50F207316C100AF6E7B /* Assets.xcassets */,
 				422BF514207316C100AF6E7B /* Info.plist */,
 				422BF50C207316BF00AF6E7B /* whatsgoindown.xcdatamodeld */,
 				422BF51A2073177F00AF6E7B /* GoogleService-Info.plist */,
+				D9098FBA207F258C00BF8654 /* EventDetailViewController.swift */,
 			);
 			path = whatsgoindown;
 			sourceTree = "<group>";
@@ -253,13 +256,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42CC55AF207D7F390077E72C /* MapViewController.swift in Sources */,
 				42ADDFB1207D6BF300FAFFF6 /* EventsViewController.swift in Sources */,
 				4272DF5B207C713000A852B9 /* LoginViewController.swift in Sources */,
 				422BF5272073219B00AF6E7B /* Event.swift in Sources */,
 				422BF506207316BF00AF6E7B /* AppDelegate.swift in Sources */,
 				422BF50E207316BF00AF6E7B /* whatsgoindown.xcdatamodeld in Sources */,
+				D9098FBB207F258C00BF8654 /* EventDetailViewController.swift in Sources */,
 				4272DF59207C712500A852B9 /* RegisterViewController.swift in Sources */,
-				423030EF207EB24800B13CA4 /* MapViewController.swift in Sources */,
 				421FB554207D38E100D68418 /* MainScreenViewController.swift in Sources */,
 				422BF529207321F400AF6E7B /* DataStore.swift in Sources */,
 				422BF525207320BF00AF6E7B /* CreateEventViewController.swift in Sources */,

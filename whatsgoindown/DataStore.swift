@@ -39,6 +39,7 @@ class DataStore {
         
         // Fetch the data from Firebase and store it in our internal events array.
         // This is a one-time listener.
+        self.events.removeAll()
         ref.child("events").observeSingleEvent(of: .value, with: { (snapshot) in
             // Get the top-level dictionary.
             let value = snapshot.value as? NSDictionary
@@ -51,13 +52,13 @@ class DataStore {
                     let eventName = event["eventName"]
                     let eventHost = event["eventHost"]
                     let eventAddress = event["eventAddress"]
-                    let eventTime = event["eventTime"]
-                    let eventTimeZone = event["eventTimeZone"]
+                    let eventStartDate = event["eventStartDate"]
+                    let eventEndDate = event["eventEndDate"]
                     let eventType = event["eventType"]
                     let eventDescription = event["eventDescription"]
                     let eventLongitude = event["eventLongitude"]
                     let eventLatitude = event["eventLatitude"]
-                    let newEvent = Event(id: id, eventName: eventName!, eventHost: eventHost!, eventAddress: eventAddress!, eventTime: eventTime!, eventTimeZone: eventTimeZone!, eventType: eventType!, eventDescription: eventDescription!, eventLongitude: eventLongitude!, eventLatitude: eventLatitude!)
+                    let newEvent = Event(id: id, eventName: eventName!, eventHost: eventHost!, eventAddress: eventAddress!, eventStartDate: eventStartDate!, eventEndDate: eventEndDate!, eventType: eventType!, eventDescription: eventDescription!, eventLongitude: eventLongitude!, eventLatitude: eventLatitude!)
                     self.events.append(newEvent)
                 }
             }
@@ -74,8 +75,8 @@ class DataStore {
             "eventName": event.eventName,
             "eventHost": event.eventHost,
             "eventAddress": event.eventAddress,
-            "eventTime": event.eventTime,
-            "eventTimeZone": event.eventTimeZone,
+            "eventStartDate": event.eventStartDate,
+            "eventEndDate": event.eventEndDate,
             "eventType": event.eventType,
             "eventDescription": event.eventDescription,
             "eventLongitude": event.eventLongitude,

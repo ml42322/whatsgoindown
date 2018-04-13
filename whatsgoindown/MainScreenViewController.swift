@@ -14,8 +14,7 @@ class MainScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        DataStore.shared.loadEvents()
     }
 
     override func didReceiveMemoryWarning() {
