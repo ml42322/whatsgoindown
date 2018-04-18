@@ -23,6 +23,7 @@
 		4272DF5B207C713000A852B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4272DF5A207C713000A852B9 /* LoginViewController.swift */; };
 		42ADDFB1207D6BF300FAFFF6 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42ADDFB0207D6BF300FAFFF6 /* EventsViewController.swift */; };
 		42CC55AF207D7F390077E72C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CC55AE207D7F390077E72C /* MapViewController.swift */; };
+		42F298EC20879F48005806B0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F298EB20879F48005806B0 /* ProfileViewController.swift */; };
 		D9098FBB207F258C00BF8654 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9098FBA207F258C00BF8654 /* EventDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		4272DF5A207C713000A852B9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		42ADDFB0207D6BF300FAFFF6 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		42CC55AE207D7F390077E72C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		42F298EB20879F48005806B0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		536427CFA05E10CEF9FFB772 /* Pods_whatsgoindown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whatsgoindown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4568B405E16077B0070F75 /* Pods-whatsgoindown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsgoindown.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whatsgoindown/Pods-whatsgoindown.debug.xcconfig"; sourceTree = "<group>"; };
 		D9098FBA207F258C00BF8654 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				422BF524207320BF00AF6E7B /* CreateEventViewController.swift */,
 				42ADDFB0207D6BF300FAFFF6 /* EventsViewController.swift */,
 				42CC55AE207D7F390077E72C /* MapViewController.swift */,
+				42F298EB20879F48005806B0 /* ProfileViewController.swift */,
 				422BF50F207316C100AF6E7B /* Assets.xcassets */,
 				422BF514207316C100AF6E7B /* Info.plist */,
 				422BF50C207316BF00AF6E7B /* whatsgoindown.xcdatamodeld */,
@@ -266,6 +269,7 @@
 				4272DF59207C712500A852B9 /* RegisterViewController.swift in Sources */,
 				421FB554207D38E100D68418 /* MainScreenViewController.swift in Sources */,
 				422BF529207321F400AF6E7B /* DataStore.swift in Sources */,
+				42F298EC20879F48005806B0 /* ProfileViewController.swift in Sources */,
 				422BF525207320BF00AF6E7B /* CreateEventViewController.swift in Sources */,
 				421FB556207D3AED00D68418 /* SettingsViewController.swift in Sources */,
 			);
