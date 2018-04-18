@@ -12,6 +12,8 @@ import FirebaseAuth
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var tblAttendEvent: UITableView!
+    @IBOutlet weak var tblHostEvent: UITableView!
     @IBOutlet weak var lblEmail: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
