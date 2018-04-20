@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import GoogleMaps
 
 class CreateEventViewController: UIViewController {
 
@@ -22,6 +23,8 @@ class CreateEventViewController: UIViewController {
     
     var startDate: String?
     var endDate: String?
+    var coordinates = CLLocationCoordinate2D()
+    var delegate: ChooseEventLocationViewController?
     
     @IBAction func startDateAction(_ sender: Any) {
         let string = handleDatePicker(date: startDatePicker)
@@ -50,11 +53,12 @@ class CreateEventViewController: UIViewController {
             startDate = handleDatePicker(date: startDatePicker)
             endDate = handleDatePicker(date: endDatePicker)
             
-            let event = Event(id: "", eventName: eventNameText.text!, eventHost: email!.description, eventAddress: eventAddressText.text!, eventStartDate: startDate!, eventEndDate: endDate!, eventType: eventTypeText.text!, eventDescription: eventDescriptionText.text!, eventLongitude: "TBD", eventLatitude: "TBD")
+            let event = Event(id: "", eventName: eventNameText.text!, eventHost: email!.description, eventAddress: eventAddressText.text!, eventStartDate: startDate!, eventEndDate: endDate!, eventType: eventTypeText.text!, eventDescription: eventDescriptionText.text!, eventLongitude: coordinates.longitude.description, eventLatitude: coordinates.latitude.description)
             DataStore.shared.addEvent(event: event)
         }
         print("Event Added")
         lblMessage.text = "Event added!"
+        self.performSegue(withIdentifier: "postCreateEvent", sender: self)
     }
     
     

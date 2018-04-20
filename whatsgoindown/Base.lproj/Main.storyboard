@@ -344,7 +344,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descr" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rd-hm-jVB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descr" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rd-hm-jVB">
                                 <rect key="frame" x="145" y="392" width="214" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -481,7 +481,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="p70-P4-ie7"/>
+                                    <segue destination="LUs-yd-Mmk" kind="show" id="pJd-09-8SD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3R-09-3Kp">
@@ -563,7 +563,7 @@
                                     <color key="titleColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yr7-Fb-BAJ" kind="show" id="tPV-mX-4GG"/>
+                                    <segue destination="LUs-yd-Mmk" kind="show" id="T7m-Og-17g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2J-qg-QlU">
@@ -629,11 +629,12 @@
                         <outlet property="eventTypeText" destination="g2i-Pi-E0D" id="o8E-gU-GBt"/>
                         <outlet property="lblMessage" destination="iq5-6J-JTv" id="06Z-M6-U9b"/>
                         <outlet property="startDatePicker" destination="GhU-yB-nFY" id="zNI-8W-r0q"/>
+                        <segue destination="yr7-Fb-BAJ" kind="show" identifier="postCreateEvent" id="NQE-UB-iod"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061.5999999999999" y="1133.8830584707648"/>
+            <point key="canvasLocation" x="1854" y="190"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="P8C-Sg-Ayn">
@@ -643,12 +644,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ah8-m7-E2f" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
-                                <color key="backgroundColor" red="0.76629290800000005" green="0.76629290800000005" blue="0.76629290800000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAe-aP-Sul">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAe-aP-Sul">
                                 <rect key="frame" x="24" y="58" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="List">
                                     <color key="titleColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -665,17 +663,8 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Ah8-m7-E2f" firstAttribute="leading" secondItem="3aB-IQ-6wE" secondAttribute="leading" id="I6h-SH-0Ih"/>
-                            <constraint firstItem="Ah8-m7-E2f" firstAttribute="bottom" secondItem="3aB-IQ-6wE" secondAttribute="bottom" id="LfS-2Q-8Ft"/>
-                            <constraint firstItem="Ah8-m7-E2f" firstAttribute="top" secondItem="fAe-aP-Sul" secondAttribute="bottom" constant="8" id="iNt-68-8LK"/>
-                            <constraint firstItem="Ah8-m7-E2f" firstAttribute="trailing" secondItem="3aB-IQ-6wE" secondAttribute="trailing" id="mrV-G2-x8x"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3aB-IQ-6wE"/>
                     </view>
-                    <connections>
-                        <outlet property="mapView" destination="Ah8-m7-E2f" id="BJa-lW-VVu"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVj-hg-hAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -791,6 +780,41 @@
             </objects>
             <point key="canvasLocation" x="1056.8" y="1934.4827586206898"/>
         </scene>
+        <!--Choose Event Location View Controller-->
+        <scene sceneID="Xs1-Rt-r1R">
+            <objects>
+                <viewController id="LUs-yd-Mmk" customClass="ChooseEventLocationViewController" customModule="whatsgoindown" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m68-8k-tvt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J66-JI-mKN">
+                                <rect key="frame" x="16" y="20" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="yr7-Fb-BAJ" kind="show" id="W65-qd-zSw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Long press where you want your event to be" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv7-OG-CpW">
+                                <rect key="frame" x="16" y="58" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="e17-zP-vua"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toCreateEventPage" id="H5h-1j-Gac"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7H-uF-sW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.60000000000002" y="1133.8830584707648"/>
+        </scene>
         <!--Settings View Controller-->
         <scene sceneID="JYU-vM-LrL">
             <objects>
@@ -851,9 +875,11 @@
         <image name="2" width="678" height="308"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="H5h-1j-Gac"/>
+        <segue reference="T7m-Og-17g"/>
         <segue reference="F9u-4w-m7M"/>
-        <segue reference="Oeh-uI-zak"/>
-        <segue reference="Z6h-2G-nlc"/>
+        <segue reference="aPy-b5-RTq"/>
+        <segue reference="0Wg-rQ-ITw"/>
         <segue reference="S14-mb-pHV"/>
     </inferredMetricsTieBreakers>
 </document>

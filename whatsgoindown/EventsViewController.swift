@@ -15,7 +15,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let count = DataStore.shared.count() - 1
+        let count = DataStore.shared.count()
         var i = 0
         while i < count {
             eventsList.append(DataStore.shared.getEvent(index: i))
