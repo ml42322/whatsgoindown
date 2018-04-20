@@ -11,7 +11,7 @@ import UIKit
 class EventDetailViewController: UIViewController {
     
     var event: Event!
-    var delegate: EventsViewController?
+    var delegate: Any?
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var lblName: UILabel!
@@ -23,7 +23,11 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var lblHost: UILabel!
     
     @IBAction func backBtn(_ sender: Any) {
-        self.performSegue(withIdentifier: "toHome", sender: self)
+        if ((delegate as? ProfileViewController) != nil){
+                    self.performSegue(withIdentifier: "tohost", sender: self)
+        }else{
+                        self.performSegue(withIdentifier: "toHome", sender: self)
+        }
     }
     
     override func viewDidLoad() {
