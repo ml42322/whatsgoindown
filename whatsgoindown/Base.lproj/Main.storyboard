@@ -380,6 +380,7 @@
                         <outlet property="lblStart" destination="hoR-xc-pA3" id="1DG-Tv-9RI"/>
                         <outlet property="lblType" destination="eKh-G1-DGe" id="9Z4-0C-qMd"/>
                         <segue destination="yr7-Fb-BAJ" kind="show" identifier="toHome" id="aPy-b5-RTq"/>
+                        <segue destination="JN0-1n-znf" kind="show" identifier="tohost" id="F9u-4w-m7M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFg-1k-qTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -699,6 +700,39 @@
                                 <rect key="frame" x="0.0" y="188" width="375" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hostid" textLabel="Hrf-Gp-2W1" detailTextLabel="R9A-Ac-GDr" style="IBUITableViewCellStyleSubtitle" id="wNw-VM-1z6">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wNw-VM-1z6" id="aiA-XS-5FL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hrf-Gp-2W1">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R9A-Ac-GDr">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="oVC-YZ-Dad" kind="show" id="Z6h-2G-nlc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JN0-1n-znf" id="1zI-wC-V2f"/>
+                                    <outlet property="delegate" destination="JN0-1n-znf" id="AGr-gA-Ljd"/>
+                                </connections>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bZC-GK-1if">
                                 <rect key="frame" x="0.0" y="439" width="375" height="228"/>
@@ -800,7 +834,9 @@
         <image name="2" width="678" height="308"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dhZ-Z2-3aq"/>
+        <segue reference="3fn-Hl-UcG"/>
+        <segue reference="kg5-gW-Kxr"/>
+        <segue reference="Z6h-2G-nlc"/>
         <segue reference="S14-mb-pHV"/>
     </inferredMetricsTieBreakers>
 </document>
