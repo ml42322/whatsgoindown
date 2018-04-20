@@ -10,10 +10,16 @@ import UIKit
 
 class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var eventsList = [Event]()
     @IBOutlet weak var tableview: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let count = DataStore.shared.count()
+        for i in 0...(count-1) {
+            eventsList.append(DataStore.shared.getEvent(index: i))
+        }
+        print(eventsList)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +38,6 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.textLabel?.text = event.eventName
         cell.detailTextLabel?.text =  event.eventAddress
-        
         return cell
     }
     
@@ -44,7 +49,6 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             destinationVC.delegate = self
         }
     }
-
 
     /*
     // MARK: - Navigation

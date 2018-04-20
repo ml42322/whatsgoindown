@@ -24,9 +24,9 @@ class MainScreenViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if Auth.auth().currentUser != nil {
-            self.performSegue(withIdentifier: "toHomeScreen", sender: self)
-        }
+        //if Auth.auth().currentUser != nil {
+        //    self.performSegue(withIdentifier: "toHomeScreen", sender: self)
+        //}
     }
 
     /*
