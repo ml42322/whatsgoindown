@@ -9,5 +9,6 @@ target 'whatsgoindown' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'GoogleMaps'
 
 end

@@ -6,45 +6,19 @@
 //
 
 import UIKit
-import MapKit
+import GoogleMaps
+
 
 class MapViewController: UIViewController {
-    @IBOutlet weak var mkMapView: MKMapView!
     
+    @IBOutlet weak var mapView: GMSMapView!
+    private let locationManager = CLLocationManager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        // 1
-        //mkMapView.showsCompass = true
-        //mkMapView.showsScale = true
-        //let location = CLLocationCoordinate2D(latitude: 30.2849,longitude: 97.7341)
-        let initialLocation = CLLocation(latitude: 30.286272, longitude:  -97.736593)
-        let regionRadius: CLLocationDistance = 1000
-        func centerMapOnLocation(location: CLLocation) {
-            let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-                                                                      regionRadius, regionRadius)
-            mkMapView.setRegion(coordinateRegion, animated: true)
-        }
-        centerMapOnLocation(location: initialLocation)
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
 
-        
-        // 2
-        /*
-        let span = MKCoordinateSpanMake(0.07, 0.07)
-        let region = MKCoordinateRegion(center: location, span: span)
-        mkMapView.setRegion(region, animated: true)
-        let scale = MKScaleView(mapView: mkMapView)
-        scale.scaleVisibility = .visible // always visible
-        view.addSubview(scale)
-        
-        //3
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        annotation.title = "The University of Texas at Austin"
-        //annotation.subtitle = "London"
-        mkMapView.addAnnotation(annotation)
- */
-  
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,4 +37,23 @@ class MapViewController: UIViewController {
     }
     */
 
+}
+extension MapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        guard status == .authorizedWhenInUse else {
+            return
+        }
+        locationManager.startUpdatingLocation()
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.first else {
+            return
+        }
+
+        mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+        locationManager.stopUpdatingLocation()
+    }
 }

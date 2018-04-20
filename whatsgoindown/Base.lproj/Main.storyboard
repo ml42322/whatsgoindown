@@ -418,16 +418,6 @@
                                 <color key="textColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3R-09-3Kp">
-                                <rect key="frame" x="151" y="34" width="73" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Map Mode">
-                                    <color key="titleColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="jgF-Te-vAm" kind="show" id="nku-9L-Szd"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BXs-VZ-e2n">
                                 <rect key="frame" x="0.0" y="192" width="375" height="475"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -492,6 +482,16 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="p70-P4-ie7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3R-09-3Kp">
+                                <rect key="frame" x="172" y="34" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Map">
+                                    <color key="titleColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jgF-Te-vAm" kind="show" id="nku-9L-Szd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -643,26 +643,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bh9-Nf-2I1">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                            </mapView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ah8-m7-E2f" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
+                                <color key="backgroundColor" red="0.76629290800000005" green="0.76629290800000005" blue="0.76629290800000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAe-aP-Sul">
+                                <rect key="frame" x="24" y="58" width="30" height="30"/>
+                                <state key="normal" title="List">
+                                    <color key="titleColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="yr7-Fb-BAJ" kind="show" id="Oeh-uI-zak"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKg-sc-Jw7">
+                                <rect key="frame" x="150" y="63" width="75" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bh9-Nf-2I1" firstAttribute="bottom" secondItem="3aB-IQ-6wE" secondAttribute="bottom" id="MzF-VE-FM9"/>
-                            <constraint firstItem="bh9-Nf-2I1" firstAttribute="leading" secondItem="3aB-IQ-6wE" secondAttribute="leading" id="dBH-7x-1K5"/>
-                            <constraint firstItem="bh9-Nf-2I1" firstAttribute="top" secondItem="3aB-IQ-6wE" secondAttribute="top" id="dOa-sy-bAX"/>
-                            <constraint firstItem="bh9-Nf-2I1" firstAttribute="trailing" secondItem="3aB-IQ-6wE" secondAttribute="trailing" id="qT5-p0-Y3C"/>
+                            <constraint firstItem="Ah8-m7-E2f" firstAttribute="leading" secondItem="3aB-IQ-6wE" secondAttribute="leading" id="I6h-SH-0Ih"/>
+                            <constraint firstItem="Ah8-m7-E2f" firstAttribute="bottom" secondItem="3aB-IQ-6wE" secondAttribute="bottom" id="LfS-2Q-8Ft"/>
+                            <constraint firstItem="Ah8-m7-E2f" firstAttribute="top" secondItem="fAe-aP-Sul" secondAttribute="bottom" constant="8" id="iNt-68-8LK"/>
+                            <constraint firstItem="Ah8-m7-E2f" firstAttribute="trailing" secondItem="3aB-IQ-6wE" secondAttribute="trailing" id="mrV-G2-x8x"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3aB-IQ-6wE"/>
                     </view>
                     <connections>
-                        <outlet property="mkMapView" destination="bh9-Nf-2I1" id="b68-FP-bMs"/>
+                        <outlet property="mapView" destination="Ah8-m7-E2f" id="BJa-lW-VVu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVj-hg-hAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-212" y="1984"/>
+            <point key="canvasLocation" x="-212" y="1983.9580209895055"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="Cdq-vp-s4e">
@@ -834,8 +851,8 @@
         <image name="2" width="678" height="308"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3fn-Hl-UcG"/>
-        <segue reference="kg5-gW-Kxr"/>
+        <segue reference="F9u-4w-m7M"/>
+        <segue reference="Oeh-uI-zak"/>
         <segue reference="Z6h-2G-nlc"/>
         <segue reference="S14-mb-pHV"/>
     </inferredMetricsTieBreakers>
