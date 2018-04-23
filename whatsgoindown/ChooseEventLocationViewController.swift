@@ -17,7 +17,9 @@ class ChooseEventLocationViewController: UIViewController, GMSMapViewDelegate, C
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+        locationManager.requestWhenInUseAuthorization()
         mapView = GMSMapView.map(withFrame: CGRect(x: 100, y: 100, width: 400, height: 500), camera: GMSCameraPosition.camera(withLatitude: 30.2862184, longitude: -97.739388, zoom: 15.0))
         mapView.delegate = self
         
@@ -43,5 +45,20 @@ class ChooseEventLocationViewController: UIViewController, GMSMapViewDelegate, C
             destinationVC.delegate = self
         }
     }
-
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        guard status == .authorizedWhenInUse else {
+            return
+        }
+        locationManager.startUpdatingLocation()
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.first else {
+            return
+        }
+        mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+        locationManager.stopUpdatingLocation()
+    }
 }
