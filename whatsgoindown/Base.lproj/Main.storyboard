@@ -398,9 +398,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjt-lE-cg3">
-                                <rect key="frame" x="300" y="32" width="67" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjt-lE-cg3">
+                                <rect key="frame" x="302" y="50" width="57" height="30"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <state key="normal" title="Settings">
                                     <color key="titleColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -415,7 +414,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Events Happening Right Now" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpi-Yu-ga4">
-                                <rect key="frame" x="67" y="153" width="240" height="40"/>
+                                <rect key="frame" x="16" y="153" width="343" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -459,19 +458,8 @@
                                     <outlet property="delegate" destination="yr7-Fb-BAJ" id="zk8-oH-3tS"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VF2-xd-Pjt">
-                                <rect key="frame" x="24" y="33" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <state key="normal" title="Profile">
-                                    <color key="titleColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="JN0-1n-znf" kind="show" id="3fn-Hl-UcG"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWC-3S-fl2">
-                                <rect key="frame" x="16" y="105" width="142" height="40"/>
+                                <rect key="frame" x="38" y="105" width="142" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -498,7 +486,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oN4-gl-YWX">
-                                <rect key="frame" x="172" y="105" width="187" height="40"/>
+                                <rect key="frame" x="203" y="105" width="131" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -514,8 +502,24 @@
                                     <segue destination="u93-gA-GC2" kind="show" id="hvp-j0-Zbg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VF2-xd-Pjt">
+                                <rect key="frame" x="15" y="50" width="44" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <state key="normal" title="Profile">
+                                    <color key="titleColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JN0-1n-znf" kind="show" id="3fn-Hl-UcG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fjt-lE-cg3" firstAttribute="top" secondItem="dIM-KS-rnR" secondAttribute="top" constant="30" id="CeS-gJ-tu8"/>
+                            <constraint firstItem="VF2-xd-Pjt" firstAttribute="leading" secondItem="dIM-KS-rnR" secondAttribute="leading" constant="15" id="JG9-8F-KZZ"/>
+                            <constraint firstItem="dIM-KS-rnR" firstAttribute="trailing" secondItem="Fjt-lE-cg3" secondAttribute="trailing" constant="16" id="WAa-g8-jft"/>
+                            <constraint firstItem="VF2-xd-Pjt" firstAttribute="top" secondItem="dIM-KS-rnR" secondAttribute="top" constant="30" id="WjW-NW-EvB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dIM-KS-rnR"/>
                     </view>
                     <connections>
@@ -863,7 +867,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellid" textLabel="GkP-bL-wZv" detailTextLabel="ofZ-DQ-0Ok" style="IBUITableViewCellStyleSubtitle" id="JgF-mp-C1a">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="allid" textLabel="GkP-bL-wZv" detailTextLabel="ofZ-DQ-0Ok" style="IBUITableViewCellStyleSubtitle" id="JgF-mp-C1a">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JgF-mp-C1a" id="lo1-Y4-3Fd">
@@ -886,11 +890,14 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="oVC-YZ-Dad" kind="show" id="JM1-Nv-BDH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="yr7-Fb-BAJ" id="TUu-4F-oeb"/>
-                                    <outlet property="delegate" destination="yr7-Fb-BAJ" id="vP2-Ix-kkc"/>
+                                    <outlet property="dataSource" destination="u93-gA-GC2" id="ObW-YY-XsT"/>
+                                    <outlet property="delegate" destination="u93-gA-GC2" id="Q34-AF-DsI"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="All Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bua-VJ-Iwo">
@@ -913,7 +920,7 @@
                         <viewLayoutGuide key="safeArea" id="tDL-Sw-oaK"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="7Gv-iM-3AL" id="c90-Bl-zI4"/>
+                        <outlet property="tableview" destination="7Gv-iM-3AL" id="GgD-oR-8fE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0RL-T2-BnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -983,7 +990,7 @@
         <segue reference="pJd-09-8SD"/>
         <segue reference="3fn-Hl-UcG"/>
         <segue reference="c68-hP-ycf"/>
-        <segue reference="0Wg-rQ-ITw"/>
+        <segue reference="JM1-Nv-BDH"/>
         <segue reference="hJJ-kf-aAb"/>
     </inferredMetricsTieBreakers>
 </document>
