@@ -1,20 +1,21 @@
 //
-//  MainScreenViewController.swift
+//  AllEventsViewController.swift
 //  whatsgoindown
 //
-//  Created by Wilshire Liu on 4/10/18.
+//  Created by Wilshire Liu on 4/23/18.
 //  Copyright © 2018 Wilshire Liu. All rights reserved.
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth
 
-class MainScreenViewController: UIViewController {
-
+class AllEventsViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        DataStore.shared.loadEvents()
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,12 +23,6 @@ class MainScreenViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        //if Auth.auth().currentUser != nil {
-        //    self.performSegue(withIdentifier: "toHomeScreen", sender: self)
-        //}
-    }
 
     /*
     // MARK: - Navigation

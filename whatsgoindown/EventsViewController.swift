@@ -21,6 +21,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             eventsList.append(DataStore.shared.getEvent(index: i))
             i += 1
         }
+        print(count)
         print(eventsList)
     }
 

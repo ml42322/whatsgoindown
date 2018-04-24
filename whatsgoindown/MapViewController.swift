@@ -45,7 +45,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
 
             j += 1
         }
-
+        print(count)
         print(eventsList)
         
         //mapView.isMyLocationEnabled = true

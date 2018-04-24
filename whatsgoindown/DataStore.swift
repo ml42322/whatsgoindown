@@ -61,6 +61,7 @@ class DataStore {
                     let newEvent = Event(id: id, eventName: eventName!, eventHost: eventHost!, eventAddress: eventAddress!, eventStartDate: eventStartDate!, eventEndDate: eventEndDate!, eventType: eventType!, eventDescription: eventDescription!, eventLongitude: eventLongitude!, eventLatitude: eventLatitude!)
                     self.events.append(newEvent)
                 }
+                print("datastore:", self.events)
             }
         }) { (error) in
             print(error.localizedDescription)
