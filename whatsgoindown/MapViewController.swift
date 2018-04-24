@@ -10,6 +10,7 @@ import GoogleMaps
 
 class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     
+    @IBOutlet weak var addressLabel: UILabel!
     private let locationManager = CLLocationManager()
     var mapView = GMSMapView()
     var eventsList = [Event]()
@@ -21,7 +22,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         locationManager.requestWhenInUseAuthorization()
-        
+    
         mapView = GMSMapView.map(withFrame: CGRect(x: 100, y: 100, width: 400, height: 500), camera: GMSCameraPosition.camera(withLatitude: 30.2862184, longitude: -97.739388, zoom: 15.0))
         mapView.delegate = self
         
@@ -41,8 +42,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
             markers[j].title = e.eventName
             markers[j].snippet = "\(e.eventType), \(e.eventDescription)"
             markers[j].map = mapView
+
             j += 1
         }
+
         print(eventsList)
         
         //mapView.isMyLocationEnabled = true
@@ -84,5 +87,19 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         }
         mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
         locationManager.stopUpdatingLocation()
+        reverseGeocodeCoordinate(mapView.camera.target)
+    }
+    
+    private func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D){
+            let geocoder = GMSGeocoder()
+        geocoder.reverseGeocodeCoordinate(coordinate){
+            response, error in guard let address = response?.firstResult(), let lines = address.lines else{
+                return
+            }
+            self.addressLabel.text = lines.joined(separator: "\n")
+        }
+        let labelHeight = self.addressLabel.intrinsicContentSize.height
+        self.mapView.padding = UIEdgeInsets(top: self.view.safeAreaInsets.top, left: 0, bottom: labelHeight, right: 0)
+        
     }
 }
