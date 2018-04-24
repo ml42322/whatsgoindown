@@ -96,10 +96,11 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
             response, error in guard let address = response?.firstResult(), let lines = address.lines else{
                 return
             }
+            let labelHeight = self.addressLabel.intrinsicContentSize.height
+            self.mapView.padding = UIEdgeInsets(top: self.view.safeAreaInsets.top, left: 0, bottom: labelHeight, right: 0)
             self.addressLabel.text = lines.joined(separator: "\n")
         }
-        let labelHeight = self.addressLabel.intrinsicContentSize.height
-        self.mapView.padding = UIEdgeInsets(top: self.view.safeAreaInsets.top, left: 0, bottom: labelHeight, right: 0)
+
         
     }
 }

@@ -14,6 +14,7 @@ class ChooseEventLocationViewController: UIViewController, GMSMapViewDelegate, C
     private let locationManager = CLLocationManager()
     var mapView = GMSMapView()
     var CL = CLLocationCoordinate2D()
+    var address = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +35,23 @@ class ChooseEventLocationViewController: UIViewController, GMSMapViewDelegate, C
     
     func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
         print("tap to CreateEventPage")
-        CL = coordinate
-        self.performSegue(withIdentifier: "toCreateEventPage", sender: self)
+        let geocoder = GMSGeocoder()
+        geocoder.reverseGeocodeCoordinate(coordinate){
+            response, error in guard let geoaddress = response?.firstResult()
+                else{
+                    return
+            }
+            self.address = (geoaddress.lines?.joined(separator: "\n"))!
+            self.CL = coordinate
+            self.performSegue(withIdentifier: "toCreateEventPage", sender: self)
+        }
+ 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? CreateEventViewController {
             destinationVC.coordinates = CL
+            destinationVC.eventAddress = address
             // Set the delegate (self = this object).
             destinationVC.delegate = self
         }

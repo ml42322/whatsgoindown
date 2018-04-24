@@ -20,6 +20,7 @@ class CreateEventViewController: UIViewController {
     @IBOutlet weak var eventTypeText: UITextField!
     @IBOutlet weak var eventDescriptionText: UITextField!
     @IBOutlet weak var lblMessage: UILabel!
+    var eventAddress: String?
     
     var startDate: String?
     var endDate: String?
@@ -70,6 +71,8 @@ class CreateEventViewController: UIViewController {
             lblMessage.text = "Signed in as \(email!.description)"
         }
         let currentDate = NSDate()
+        self.eventAddressText.text = eventAddress
+        print(self.eventAddressText.text!)
         self.startDatePicker.minimumDate = currentDate as Date
         self.endDatePicker.minimumDate = currentDate as Date
     }
