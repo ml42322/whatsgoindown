@@ -14,6 +14,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     private let locationManager = CLLocationManager()
     var mapView = GMSMapView()
     var eventsList = [Event]()
+    let currentDate = Date()
+    var eventsToShow = [Event]()
     var markers = [GMSMarker]()
     
     override func viewDidLoad() {
@@ -33,20 +35,32 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         var i = 0
         while i < count {
             eventsList.append(DataStore.shared.getEvent(index: i))
-            markers.append(GMSMarker())
             i += 1
         }
+        eventsToShow.removeAll()
+        for m in eventsList {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = DateFormatter.Style.medium
+            dateFormatter.timeStyle = DateFormatter.Style.short
+            let startDate = dateFormatter.date(from: m.eventStartDate)
+            let endDate = dateFormatter.date(from: m.eventEndDate)
+            if startDate! <= currentDate && endDate! >= currentDate {
+                eventsToShow.append(m)
+                markers.append(GMSMarker())
+            }
+        }
         var j = 0
-        for e in eventsList {
+        for e in eventsToShow {
             markers[j].position = CLLocationCoordinate2D(latitude: Double(e.eventLatitude)!, longitude: Double(e.eventLongitude)!)
             markers[j].title = e.eventName
             markers[j].snippet = "\(e.eventType), \(e.eventDescription)"
             markers[j].map = mapView
-
             j += 1
         }
         print(count)
         print(eventsList)
+        print(eventsToShow.count)
+        print(eventsToShow)
         
         //mapView.isMyLocationEnabled = true
         //mapView.settings.myLocationButton = true

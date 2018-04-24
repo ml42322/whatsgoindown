@@ -31,7 +31,6 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(DataStore.shared.count())
         return DataStore.shared.count()
     }
     
@@ -41,7 +40,6 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
         let event = DataStore.shared.getEvent(index: indexPath.row)
         cell.textLabel?.text = event.eventName
         cell.detailTextLabel?.text =  event.eventAddress
-        print("cell.textLabel?.text!")
         return cell
     }
     

@@ -41,7 +41,7 @@ class CreateEventViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.short
-        
+
         let string = dateFormatter.string(from: date.date)
         return string
     }
