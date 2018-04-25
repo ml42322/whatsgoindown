@@ -25,11 +25,14 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         eventsToShow.removeAll()
         for j in eventsList {
+            print(j.eventName)
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = DateFormatter.Style.medium
             dateFormatter.timeStyle = DateFormatter.Style.short
             let startDate = dateFormatter.date(from: j.eventStartDate)
+            print(startDate)
             let endDate = dateFormatter.date(from: j.eventEndDate)
+            print(endDate)
             //if startDate! <= currentDate && endDate! >= currentDate {
             //    eventsToShow.append(j)
             //}
