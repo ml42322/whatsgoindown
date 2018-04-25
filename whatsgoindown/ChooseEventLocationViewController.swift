@@ -50,7 +50,6 @@ class ChooseEventLocationViewController: UIViewController, GMSMapViewDelegate, C
         locationManager.requestWhenInUseAuthorization()
         mapView = GMSMapView.map(withFrame: CGRect(x: 100, y: 100, width: 400, height: 400), camera: GMSCameraPosition.camera(withLatitude: 30.2862184, longitude: -97.739388, zoom: 15.0))
         mapView.delegate = self
-        
         mapView.center = self.view.center
         self.view.addSubview(mapView)
     }
@@ -69,7 +68,6 @@ class ChooseEventLocationViewController: UIViewController, GMSMapViewDelegate, C
                 else{
                     return
             }
-        
             self.address = (geoaddress.lines?.joined(separator: "\n"))!
             self.CL = coordinate
             self.performSegue(withIdentifier: "toCreateEventPage", sender: self)
@@ -85,6 +83,7 @@ class ChooseEventLocationViewController: UIViewController, GMSMapViewDelegate, C
             destinationVC.delegate = self
         }
     }
+    
     //CoreLocation - Getting User's current location
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         guard status == .authorizedWhenInUse else {
@@ -102,6 +101,7 @@ class ChooseEventLocationViewController: UIViewController, GMSMapViewDelegate, C
         mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
         locationManager.stopUpdatingLocation()
     }
+    
     //Search the User's input
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
                            didAutocompleteWith place: GMSPlace) {
@@ -117,7 +117,7 @@ class ChooseEventLocationViewController: UIViewController, GMSMapViewDelegate, C
             else{
                 return
             }
-            self.mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 35, bearing: 0, viewingAngle: 0)
+            self.mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
             self.marker.position = location.coordinate
             self.marker.title = place.name
             self.marker.map = self.mapView

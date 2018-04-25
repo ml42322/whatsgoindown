@@ -41,6 +41,10 @@ class RegisterViewController: UIViewController {
                 self.passwordTextField.text = ""
             }
             else {
+                let alert = UIAlertController(title: "", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+                alert.addAction(OKAction)
+                self.present(alert, animated: true, completion: nil)
                 print("Error creating user: \(error!)")
             }
         }

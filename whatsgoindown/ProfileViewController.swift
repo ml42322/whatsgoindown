@@ -28,7 +28,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
 
         while i < DataStore.shared.count(){
-            print(DataStore.shared.getEvent(index: i).eventHost)
             if DataStore.shared.getEvent(index: i).eventHost == (user?.email)!{
                 hostEvents.append(DataStore.shared.getEvent(index:i))
                 hostcount += 1
@@ -44,7 +43,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Dispose of any resources that can be recreated.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return hostcount
     }
     
@@ -53,9 +51,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         //let hostEvents = DataStore.shared.getEvent(index: indexPath.row)
         cell.textLabel?.text = hostEvents[indexPath.row].eventName
         cell.detailTextLabel?.text =  hostEvents[indexPath.row].eventAddress
- 
         return cell
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,5 +62,4 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             destinationVC.delegate = self
         }
     }
-
 }

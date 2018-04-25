@@ -36,6 +36,10 @@ class LoginViewController: UIViewController {
                 self.performSegue(withIdentifier: "postLogin", sender: self)
             }
             else {
+                let alert = UIAlertController(title: "", message: "Username or Password is incorrect", preferredStyle: UIAlertControllerStyle.alert)
+                let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+                alert.addAction(OKAction)
+                self.present(alert, animated: true, completion: nil)
                 print("Error signing in: \(error!)")
             }
         }
