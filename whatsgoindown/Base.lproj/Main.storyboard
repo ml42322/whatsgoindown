@@ -848,16 +848,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Long press where you want your event to be" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fv7-OG-CpW">
-                                <rect key="frame" x="16" y="87" width="343" height="21"/>
+                                <rect key="frame" x="16" y="569" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J66-JI-mKN">
-                                <rect key="frame" x="16" y="49" width="88" height="30"/>
+                                <rect key="frame" x="7" y="598" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="yr7-Fb-BAJ" kind="show" id="W65-qd-zSw"/>
                                 </connections>
@@ -1009,8 +1011,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="pJd-09-8SD"/>
         <segue reference="3fn-Hl-UcG"/>
-        <segue reference="Oeh-uI-zak"/>
-        <segue reference="0Wg-rQ-ITw"/>
+        <segue reference="W65-qd-zSw"/>
+        <segue reference="JM1-Nv-BDH"/>
         <segue reference="hJJ-kf-aAb"/>
     </inferredMetricsTieBreakers>
 </document>

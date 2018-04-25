@@ -33,6 +33,8 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             if startDate! <= currentDate && endDate! >= currentDate {
                 eventsToShow.append(j)
             }
+            //eventsToShow.append(j)
+
         }
         print(count)
         print(eventsList)
@@ -79,3 +81,4 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     */
 
 }
+

@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Firebase
 import GoogleMaps
+import GooglePlaces
 
 let googleApiKey = "AIzaSyAmiGquxlXDtUwSlb7BE4qi3pRz90p6Wl4"
 
@@ -23,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         GMSServices.provideAPIKey(googleApiKey)
+        GMSPlacesClient.provideAPIKey(googleApiKey)
         return true
     }
 
