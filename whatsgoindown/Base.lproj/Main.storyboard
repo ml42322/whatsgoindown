@@ -360,7 +360,7 @@
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="backBtn:" destination="oVC-YZ-Dad" eventType="touchUpInside" id="Adf-Ze-ZQK"/>
-                                    <segue destination="u93-gA-GC2" kind="show" identifier="allevents" id="Hbg-z1-lYp"/>
+                                    <segue destination="jgF-Te-vAm" kind="show" identifier="backtomap" id="Chq-PN-obS"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descr" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rd-hm-jVB">
@@ -724,6 +724,7 @@
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="dJ3-hS-7a0" id="op6-6C-kiW"/>
+                        <segue destination="oVC-YZ-Dad" kind="show" identifier="eventdetail" id="ZOH-ID-knL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVj-hg-hAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1010,11 +1011,11 @@
         <image name="2" width="678" height="308"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hbg-z1-lYp"/>
         <segue reference="pJd-09-8SD"/>
         <segue reference="F9u-4w-m7M"/>
+        <segue reference="Chq-PN-obS"/>
         <segue reference="Oeh-uI-zak"/>
-        <segue reference="JM1-Nv-BDH"/>
+        <segue reference="ZOH-ID-knL"/>
         <segue reference="hJJ-kf-aAb"/>
     </inferredMetricsTieBreakers>
 </document>

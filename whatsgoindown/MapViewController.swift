@@ -17,7 +17,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     let currentDate = Date()
     var eventsToShow = [Event]()
     var markers = [GMSMarker]()
-    
+    var markerClickedIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,11 +44,12 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
             dateFormatter.timeStyle = DateFormatter.Style.short
             let startDate = dateFormatter.date(from: m.eventStartDate)
             let endDate = dateFormatter.date(from: m.eventEndDate)
-            if startDate! <= currentDate && endDate! >= currentDate {
+            //if startDate! <= currentDate && endDate! >= currentDate {
                 eventsToShow.append(m)
                 markers.append(GMSMarker())
-            }
+            //}
         }
+        
         var j = 0
         for e in eventsToShow {
             markers[j].position = CLLocationCoordinate2D(latitude: Double(e.eventLatitude)!, longitude: Double(e.eventLongitude)!)
@@ -75,6 +76,18 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        markerClickedIndex = 0
+        for e in eventsToShow {
+            if e.eventName == marker.title{
+                
+                break
+            }else{
+                markerClickedIndex += 1
+            }
+        }
+        self.performSegue(withIdentifier: "eventdetail", sender: self)
+    }
     
     //CoreLocation
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -95,6 +108,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         reverseGeocodeCoordinate(mapView.camera.target)
     }
     
+    //Coordinates to Address
     private func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D){
             let geocoder = GMSGeocoder()
         geocoder.reverseGeocodeCoordinate(coordinate){
@@ -107,5 +121,13 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         }
 
         
+    }
+    //Segue to Event Detail Controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? EventDetailViewController{
+            destinationVC.event = DataStore.shared.getEvent(index: self.markerClickedIndex)
+            // Set the delegate (self = this object).
+            destinationVC.delegate = self
+        }
     }
 }

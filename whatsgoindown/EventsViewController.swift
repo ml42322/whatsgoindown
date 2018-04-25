@@ -30,10 +30,10 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             dateFormatter.timeStyle = DateFormatter.Style.short
             let startDate = dateFormatter.date(from: j.eventStartDate)
             let endDate = dateFormatter.date(from: j.eventEndDate)
-            if startDate! <= currentDate && endDate! >= currentDate {
-                eventsToShow.append(j)
-            }
-            //eventsToShow.append(j)
+            //if startDate! <= currentDate && endDate! >= currentDate {
+            //    eventsToShow.append(j)
+            //}
+            eventsToShow.append(j)
 
         }
         print(count)

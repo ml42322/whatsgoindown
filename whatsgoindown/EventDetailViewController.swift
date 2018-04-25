@@ -28,7 +28,10 @@ class EventDetailViewController: UIViewController {
         }else if ((delegate as? AllEventsViewController) != nil){
             self.performSegue(withIdentifier: "allevents", sender: self)
 
-        }else{
+        }else if ((delegate as? MapViewController) != nil){
+            self.performSegue(withIdentifier: "backtomap", sender: self)
+        }
+        else{
                         self.performSegue(withIdentifier: "toHome", sender: self)
         }
     }
