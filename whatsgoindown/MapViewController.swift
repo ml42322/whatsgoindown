@@ -65,7 +65,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         
         //mapView.isMyLocationEnabled = true
         //mapView.settings.myLocationButton = true
-        if let mylocation = mapView.myLocation {
+        if let mylocation = locationManager.location {
             print("User's location: \(mylocation)")
         } else {
             print("User's location is unknown")
