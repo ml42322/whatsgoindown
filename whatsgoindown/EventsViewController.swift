@@ -27,17 +27,14 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         for j in eventsList {
             print(j.eventName)
             let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = DateFormatter.Style.medium
-            dateFormatter.timeStyle = DateFormatter.Style.short
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss +0000"
             let startDate = dateFormatter.date(from: j.eventStartDate)
-            print(startDate)
+            print(startDate!)
             let endDate = dateFormatter.date(from: j.eventEndDate)
-            print(endDate)
-            //if startDate! <= currentDate && endDate! >= currentDate {
-            //    eventsToShow.append(j)
-            //}
-            eventsToShow.append(j)
-
+            print(endDate!)
+            if startDate! <= currentDate && endDate! >= currentDate {
+                eventsToShow.append(j)
+            }
         }
         print(count)
         print(eventsList)

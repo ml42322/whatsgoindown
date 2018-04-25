@@ -39,9 +39,7 @@ class CreateEventViewController: UIViewController {
     
     func handleDatePicker(date: UIDatePicker) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = DateFormatter.Style.medium
-        dateFormatter.timeStyle = DateFormatter.Style.short
-
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss +0000"
         let string = dateFormatter.string(from: date.date)
         return string
     }
@@ -61,7 +59,6 @@ class CreateEventViewController: UIViewController {
         lblMessage.text = "Event added!"
         self.performSegue(withIdentifier: "postCreateEvent", sender: self)
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,5 +97,4 @@ class CreateEventViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

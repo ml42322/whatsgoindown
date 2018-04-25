@@ -39,14 +39,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         eventsToShow.removeAll()
         for m in eventsList {
             let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = DateFormatter.Style.medium
-            dateFormatter.timeStyle = DateFormatter.Style.short
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss +0000"
             let startDate = dateFormatter.date(from: m.eventStartDate)
+            print(startDate!)
             let endDate = dateFormatter.date(from: m.eventEndDate)
-            //if startDate! <= currentDate && endDate! >= currentDate {
+            print(endDate!)
+            if startDate! <= currentDate && endDate! >= currentDate {
                 eventsToShow.append(m)
                 markers.append(GMSMarker())
-            //}
+            }
         }
         
         var j = 0

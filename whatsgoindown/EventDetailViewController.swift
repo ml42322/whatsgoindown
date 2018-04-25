@@ -43,12 +43,22 @@ class EventDetailViewController: UIViewController {
         //swipeUp.direction = UISwipeGestureRecognizerDirection.up
         //self.view.addGestureRecognizer(swipeUp)
         
+        //format the dates
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss +0000"
+        let startDate = dateFormatter.date(from: (event?.eventStartDate)!)
+        let endDate = dateFormatter.date(from: (event?.eventEndDate)!)
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        let start = dateFormatter.string(from: startDate!)
+        let end = dateFormatter.string(from: endDate!)
+        
         imageView.image = UIImage(named: "cake")
         lblName.text = event?.eventName
         lblHost.text = "Hosted by \(event.eventHost)"
         lblAddress.text = event?.eventAddress
-        lblStart.text = event?.eventStartDate
-        lblEnd.text = event.eventEndDate
+        lblStart.text = start
+        lblEnd.text = end
         lblType.text = event?.eventType
         lblDescr.text = event?.eventDescription
         

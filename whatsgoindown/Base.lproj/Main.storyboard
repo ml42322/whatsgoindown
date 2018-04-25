@@ -326,14 +326,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hoR-xc-pA3">
-                                <rect key="frame" x="94" y="248" width="214" height="40"/>
+                                <rect key="frame" x="94" y="248" width="265" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6by-JC-GSd">
-                                <rect key="frame" x="94" y="296" width="214" height="40"/>
+                                <rect key="frame" x="94" y="296" width="265" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -389,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFg-1k-qTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1423" y="2229"/>
+            <point key="canvasLocation" x="-1423.2" y="2228.6356821589206"/>
         </scene>
         <!--Events View Controller-->
         <scene sceneID="Dzp-GG-LB9">
@@ -1015,7 +1015,7 @@
         <segue reference="pJd-09-8SD"/>
         <segue reference="F9u-4w-m7M"/>
         <segue reference="Chq-PN-obS"/>
-        <segue reference="Oeh-uI-zak"/>
+        <segue reference="aPy-b5-RTq"/>
         <segue reference="ZOH-ID-knL"/>
         <segue reference="hJJ-kf-aAb"/>
     </inferredMetricsTieBreakers>
