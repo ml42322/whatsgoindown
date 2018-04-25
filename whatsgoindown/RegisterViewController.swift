@@ -37,6 +37,8 @@ class RegisterViewController: UIViewController {
                 let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
                 alert.addAction(OKAction)
                 self.present(alert, animated: true, completion: nil)
+                self.emailTextField.text = ""
+                self.passwordTextField.text = ""
             }
             else {
                 print("Error creating user: \(error!)")

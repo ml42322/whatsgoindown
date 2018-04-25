@@ -24,15 +24,15 @@ class EventDetailViewController: UIViewController {
     
     @IBAction func backBtn(_ sender: Any) {
         if ((delegate as? ProfileViewController) != nil){
-                    self.performSegue(withIdentifier: "tohost", sender: self)
+                    self.performSegue(withIdentifier: "toHost", sender: self)
         }else if ((delegate as? AllEventsViewController) != nil){
-            self.performSegue(withIdentifier: "allevents", sender: self)
+            self.performSegue(withIdentifier: "toAllEvents", sender: self)
 
         }else if ((delegate as? MapViewController) != nil){
-            self.performSegue(withIdentifier: "backtomap", sender: self)
+            self.performSegue(withIdentifier: "backToMap", sender: self)
         }
         else{
-                        self.performSegue(withIdentifier: "toHome", sender: self)
+            self.performSegue(withIdentifier: "toHome", sender: self)
         }
     }
     

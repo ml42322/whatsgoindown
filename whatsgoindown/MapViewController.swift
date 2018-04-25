@@ -18,16 +18,15 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
     var eventsToShow = [Event]()
     var markers = [GMSMarker]()
     var markerClickedIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         locationManager.requestWhenInUseAuthorization()
-    
         mapView = GMSMapView.map(withFrame: CGRect(x: 100, y: 100, width: 400, height: 500), camera: GMSCameraPosition.camera(withLatitude: 30.2862184, longitude: -97.739388, zoom: 15.0))
         mapView.delegate = self
-        
         mapView.center = self.view.center
         self.view.addSubview(mapView)
         
@@ -76,17 +75,17 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
         markerClickedIndex = 0
         for e in eventsToShow {
             if e.eventName == marker.title{
-                
                 break
             }else{
                 markerClickedIndex += 1
             }
         }
-        self.performSegue(withIdentifier: "eventdetail", sender: self)
+        self.performSegue(withIdentifier: "eventDetail", sender: self)
     }
     
     //CoreLocation

@@ -249,7 +249,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="btnRegister:" destination="O0S-3y-E8U" eventType="touchUpInside" id="s1S-WD-eeh"/>
-                                    <segue destination="yr7-Fb-BAJ" kind="show" id="FBg-SG-ApD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -360,7 +359,7 @@
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="backBtn:" destination="oVC-YZ-Dad" eventType="touchUpInside" id="Adf-Ze-ZQK"/>
-                                    <segue destination="jgF-Te-vAm" kind="show" identifier="backtomap" id="Chq-PN-obS"/>
+                                    <segue destination="jgF-Te-vAm" kind="show" identifier="backToMap" id="Chq-PN-obS"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descr" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rd-hm-jVB">
@@ -384,12 +383,13 @@
                         <outlet property="lblStart" destination="hoR-xc-pA3" id="1DG-Tv-9RI"/>
                         <outlet property="lblType" destination="eKh-G1-DGe" id="9Z4-0C-qMd"/>
                         <segue destination="yr7-Fb-BAJ" kind="show" identifier="toHome" id="aPy-b5-RTq"/>
-                        <segue destination="JN0-1n-znf" kind="show" identifier="tohost" id="F9u-4w-m7M"/>
+                        <segue destination="JN0-1n-znf" kind="show" identifier="toHost" id="F9u-4w-m7M"/>
+                        <segue destination="u93-gA-GC2" kind="show" identifier="toAllEvents" id="gra-9d-dew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xFg-1k-qTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1586.4000000000001" y="1907.4962518740631"/>
+            <point key="canvasLocation" x="-1423" y="2229"/>
         </scene>
         <!--Events View Controller-->
         <scene sceneID="Dzp-GG-LB9">
@@ -724,12 +724,12 @@
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="dJ3-hS-7a0" id="op6-6C-kiW"/>
-                        <segue destination="oVC-YZ-Dad" kind="show" identifier="eventdetail" id="ZOH-ID-knL"/>
+                        <segue destination="oVC-YZ-Dad" kind="show" identifier="eventDetail" id="ZOH-ID-knL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVj-hg-hAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-212" y="1983.9580209895055"/>
+            <point key="canvasLocation" x="102" y="1833"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="Cdq-vp-s4e">
@@ -839,7 +839,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9IU-Qa-SJK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.8" y="1934.4827586206898"/>
+            <point key="canvasLocation" x="1425" y="2534"/>
         </scene>
         <!--Choose Event Location View Controller-->
         <scene sceneID="Xs1-Rt-r1R">
@@ -1011,6 +1011,7 @@
         <image name="2" width="678" height="308"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="gra-9d-dew"/>
         <segue reference="pJd-09-8SD"/>
         <segue reference="F9u-4w-m7M"/>
         <segue reference="Chq-PN-obS"/>
