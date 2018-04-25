@@ -25,6 +25,9 @@ class EventDetailViewController: UIViewController {
     @IBAction func backBtn(_ sender: Any) {
         if ((delegate as? ProfileViewController) != nil){
                     self.performSegue(withIdentifier: "tohost", sender: self)
+        }else if ((delegate as? AllEventsViewController) != nil){
+            self.performSegue(withIdentifier: "allevents", sender: self)
+
         }else{
                         self.performSegue(withIdentifier: "toHome", sender: self)
         }
