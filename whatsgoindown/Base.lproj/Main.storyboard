@@ -1010,7 +1010,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kji-Pp-4Vf">
                                 <rect key="frame" x="163" y="262" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.12549019610000001" green="0.73333333329999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.24705882352941178" green="0.69803921568627447" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1209,7 +1209,7 @@
         <segue reference="pJd-09-8SD"/>
         <segue reference="Qt4-33-scV"/>
         <segue reference="Chq-PN-obS"/>
-        <segue reference="kg5-gW-Kxr"/>
+        <segue reference="zIM-dc-Btp"/>
         <segue reference="JM1-Nv-BDH"/>
         <segue reference="S14-mb-pHV"/>
     </inferredMetricsTieBreakers>

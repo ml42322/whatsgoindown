@@ -12,6 +12,7 @@ class ProfileEventDetailViewController: UIViewController {
 
     var event: Event!
     var delegate: Any?
+    var alertController:UIAlertController? = nil
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var lblName: UILabel!
@@ -56,7 +57,23 @@ class ProfileEventDetailViewController: UIViewController {
     }
     
     @IBAction func deleteBtn(_ sender: Any) {
+        self.alertController = UIAlertController(title: "Delete Event", message: "Do you really want to delete this event?", preferredStyle: UIAlertControllerStyle.alert)
         
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (action:UIAlertAction) in
+            print("Cancel Button Pressed");
+        }
+        self.alertController!.addAction(cancelAction)
+        
+        let OKAction = UIAlertAction(title: "Delete", style: UIAlertActionStyle.destructive) { (action:UIAlertAction) in
+            print("Delete Button Pressed");
+            DataStore.shared.deleteEvent(event: self.event);
+            if ((self.delegate as? ProfileViewController) != nil){
+                self.performSegue(withIdentifier: "backToProfile", sender: self)
+            }
+        }
+        self.alertController!.addAction(OKAction)
+        
+        self.present(self.alertController!, animated: true, completion:nil)
     }
 
     override func didReceiveMemoryWarning() {

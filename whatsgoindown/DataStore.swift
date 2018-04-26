@@ -90,4 +90,17 @@ class DataStore {
         // Also save to our internal array, to stay in sync with what's in Firebase.
         events.append(event)
     }
+    
+    func deleteEvent(event: Event) {
+        var i = 0
+        while i < events.count {
+            if events[i].id == event.id {
+                break;
+            }
+            i += 1
+        }
+        self.ref.child("events").child(event.id).removeValue()
+        events.remove(at: i)
+        print("Event deleted")
+    }
 }
