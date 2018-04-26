@@ -70,6 +70,9 @@ class DataStore {
     
     func addEvent(event: Event) {
         let key = ref.childByAutoId().key
+        print("key")
+        print(key)
+        print("key2")
         // define array of key/value pairs to store for this person.
         let eventRecord = [
             "id" : key,
@@ -88,6 +91,7 @@ class DataStore {
         self.ref.child("events").child(key).setValue(eventRecord)
         
         // Also save to our internal array, to stay in sync with what's in Firebase.
+        event.id = key
         events.append(event)
     }
     

@@ -119,13 +119,12 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
             self.mapView.padding = UIEdgeInsets(top: self.view.safeAreaInsets.top, left: 0, bottom: labelHeight, right: 0)
             self.addressLabel.text = lines.joined(separator: "\n")
         }
-
-        
     }
+    
     //Segue to Event Detail Controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? EventDetailViewController{
-            destinationVC.event = DataStore.shared.getEvent(index: self.markerClickedIndex)
+            destinationVC.event = eventsToShow[self.markerClickedIndex]
             // Set the delegate (self = this object).
             destinationVC.delegate = self
         }

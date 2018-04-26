@@ -50,7 +50,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "hostid", for: indexPath)
         //let hostEvents = DataStore.shared.getEvent(index: indexPath.row)
         cell.textLabel?.text = hostEvents[indexPath.row].eventName
-        cell.detailTextLabel?.text =  hostEvents[indexPath.row].eventAddress
+        cell.detailTextLabel?.text = hostEvents[indexPath.row].eventAddress
         return cell
     }
     
