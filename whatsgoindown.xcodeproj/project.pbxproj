@@ -11,6 +11,7 @@
 		4201E2EB208ECD870047548D /* AllEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201E2EA208ECD870047548D /* AllEventsViewController.swift */; };
 		421FB554207D38E100D68418 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FB553207D38E100D68418 /* MainScreenViewController.swift */; };
 		421FB556207D3AED00D68418 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421FB555207D3AED00D68418 /* SettingsViewController.swift */; };
+		4221F61E20927DDC006DC795 /* ProfileEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221F61D20927DDC006DC795 /* ProfileEventDetailViewController.swift */; };
 		422BF506207316BF00AF6E7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422BF505207316BF00AF6E7B /* AppDelegate.swift */; };
 		422BF50B207316BF00AF6E7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422BF509207316BF00AF6E7B /* Main.storyboard */; };
 		422BF50E207316BF00AF6E7B /* whatsgoindown.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 422BF50C207316BF00AF6E7B /* whatsgoindown.xcdatamodeld */; };
@@ -34,6 +35,7 @@
 		4201E2EA208ECD870047548D /* AllEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventsViewController.swift; sourceTree = "<group>"; };
 		421FB553207D38E100D68418 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		421FB555207D3AED00D68418 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4221F61D20927DDC006DC795 /* ProfileEventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEventDetailViewController.swift; sourceTree = "<group>"; };
 		422BF502207316BF00AF6E7B /* whatsgoindown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatsgoindown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		422BF505207316BF00AF6E7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		422BF50A207316BF00AF6E7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				D9098FBA207F258C00BF8654 /* EventDetailViewController.swift */,
 				42490409208AAFC500F89C18 /* ChooseEventLocationViewController.swift */,
 				4201E2EA208ECD870047548D /* AllEventsViewController.swift */,
+				4221F61D20927DDC006DC795 /* ProfileEventDetailViewController.swift */,
 				422BF50F207316C100AF6E7B /* Assets.xcassets */,
 				422BF514207316C100AF6E7B /* Info.plist */,
 				422BF50C207316BF00AF6E7B /* whatsgoindown.xcdatamodeld */,
@@ -278,6 +281,7 @@
 				422BF5272073219B00AF6E7B /* Event.swift in Sources */,
 				422BF506207316BF00AF6E7B /* AppDelegate.swift in Sources */,
 				422BF50E207316BF00AF6E7B /* whatsgoindown.xcdatamodeld in Sources */,
+				4221F61E20927DDC006DC795 /* ProfileEventDetailViewController.swift in Sources */,
 				4201E2EB208ECD870047548D /* AllEventsViewController.swift in Sources */,
 				D9098FBB207F258C00BF8654 /* EventDetailViewController.swift in Sources */,
 				4249040A208AAFC500F89C18 /* ChooseEventLocationViewController.swift in Sources */,

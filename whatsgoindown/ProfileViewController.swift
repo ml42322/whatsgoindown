@@ -13,13 +13,13 @@ import FirebaseAuth
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let user = Auth.auth().currentUser
-    @IBOutlet weak var tblAttendEvent: UITableView!
     @IBOutlet weak var tblHostEvent: UITableView!
     @IBOutlet weak var lblEmail: UILabel!
     var hostEvents = [Event]()
     var index = [Int]()
     var hostcount = 0
     var i = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let user = user {
@@ -55,9 +55,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destination as? EventDetailViewController,
+        if let destinationVC = segue.destination as? ProfileEventDetailViewController,
             let selectedIndexPath = self.tblHostEvent.indexPathForSelectedRow {
-            destinationVC.event = DataStore.shared.getEvent(index: index[selectedIndexPath.row])
+            destinationVC.event = hostEvents[selectedIndexPath.row]
             // Set the delegate (self = this object).
             destinationVC.delegate = self
         }
