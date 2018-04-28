@@ -162,6 +162,9 @@
 		422BF4FA207316BF00AF6E7B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+				);
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Wilshire Liu";
@@ -436,13 +439,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RZD6T59B7Q;
+				DEVELOPMENT_TEAM = 7WMXKPU5D2;
 				INFOPLIST_FILE = whatsgoindown/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wilshireliu.whatsgoindown;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wilshireliu.whatsgoindown1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,13 +458,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RZD6T59B7Q;
+				DEVELOPMENT_TEAM = 7WMXKPU5D2;
 				INFOPLIST_FILE = whatsgoindown/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wilshireliu.whatsgoindown;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wilshireliu.whatsgoindown1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

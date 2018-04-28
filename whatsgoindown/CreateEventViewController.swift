@@ -62,6 +62,8 @@ class CreateEventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+
         let user = Auth.auth().currentUser
         if let user = user {
             let email = user.email

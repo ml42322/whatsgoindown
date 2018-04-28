@@ -10,7 +10,12 @@ import UIKit
 
 class AllEventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var pastEventView: UITableView!
+    @IBOutlet weak var upcomingEventView: UITableView!
+    var pastEventsList = [Event]()
+    var upcomingEventsList = [Event]()
     var eventsList = [Event]()
+    let currentDate = Date()
     @IBOutlet weak var tableview: UITableView!
     
     override func viewDidLoad() {
@@ -21,8 +26,18 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
             eventsList.append(DataStore.shared.getEvent(index: i))
             i += 1
         }
-        print(count)
-        print(eventsList)
+
+        for j in eventsList {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss +0000"
+            let startDate = dateFormatter.date(from: j.eventStartDate)
+            let endDate = dateFormatter.date(from: j.eventEndDate)
+            if endDate! <= currentDate {
+                pastEventsList.append(j)
+            }else{
+                upcomingEventsList.append(j)
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,15 +46,35 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataStore.shared.count()
+        var count = 0
+        if tableView == upcomingEventView  {
+            count = upcomingEventsList.count
+        }
+        else if tableView == pastEventView {
+            count = pastEventsList.count
+        }
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "allid", for: indexPath)
+        var cell: UITableViewCell!
+        if tableView == pastEventView{
+            cell = tableView.dequeueReusableCell(withIdentifier: "pastid", for: indexPath)
+            let event = pastEventsList[indexPath.row]
+            cell.textLabel?.text = event.eventName
+            cell.detailTextLabel?.text =  event.eventAddress
+            print("Past \(event.eventName)")
+        }
+        if tableView == upcomingEventView{
+             cell = tableView.dequeueReusableCell(withIdentifier: "allid", for: indexPath)
         
-        let event = DataStore.shared.getEvent(index: indexPath.row)
-        cell.textLabel?.text = event.eventName
-        cell.detailTextLabel?.text =  event.eventAddress
+            let event = upcomingEventsList[indexPath.row]
+            cell.textLabel?.text = event.eventName
+            cell.detailTextLabel?.text =  event.eventAddress
+            print("Upcoming \(event.eventName)")
+
+        }
+
         return cell
     }
     
