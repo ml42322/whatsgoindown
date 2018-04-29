@@ -934,7 +934,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="oVC-YZ-Dad" kind="show" id="JM1-Nv-BDH"/>
+                                            <segue destination="oVC-YZ-Dad" kind="show" identifier="upcomingEventsSegue" id="JM1-Nv-BDH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -995,7 +995,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="oVC-YZ-Dad" kind="show" identifier="detailsegue" id="gjg-9K-rFr"/>
+                                            <segue destination="oVC-YZ-Dad" kind="show" identifier="pastEventsSegue" id="gjg-9K-rFr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1017,7 +1017,6 @@
                     </view>
                     <connections>
                         <outlet property="pastEventView" destination="sP1-Q6-7d4" id="Rhn-JG-2Ns"/>
-                        <outlet property="tableview" destination="7Gv-iM-3AL" id="GgD-oR-8fE"/>
                         <outlet property="upcomingEventView" destination="7Gv-iM-3AL" id="TNq-aP-CJN"/>
                     </connections>
                 </viewController>
@@ -1249,10 +1248,10 @@
     <inferredMetricsTieBreakers>
         <segue reference="hvp-j0-Zbg"/>
         <segue reference="pJd-09-8SD"/>
-        <segue reference="3fn-Hl-UcG"/>
+        <segue reference="Qt4-33-scV"/>
         <segue reference="nku-9L-Szd"/>
         <segue reference="c68-hP-ycf"/>
-        <segue reference="gjg-9K-rFr"/>
+        <segue reference="JM1-Nv-BDH"/>
         <segue reference="S14-mb-pHV"/>
     </inferredMetricsTieBreakers>
 </document>

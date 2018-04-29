@@ -16,7 +16,6 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
     var upcomingEventsList = [Event]()
     var eventsList = [Event]()
     let currentDate = Date()
-    @IBOutlet weak var tableview: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +29,7 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
         for j in eventsList {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss +0000"
-            let startDate = dateFormatter.date(from: j.eventStartDate)
+            //let startDate = dateFormatter.date(from: j.eventStartDate)
             let endDate = dateFormatter.date(from: j.eventEndDate)
             if endDate! <= currentDate {
                 pastEventsList.append(j)
@@ -74,17 +73,25 @@ class AllEventsViewController: UIViewController, UITableViewDelegate, UITableVie
             print("Upcoming \(event.eventName)")
 
         }
-
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destination as? EventDetailViewController,
-            let selectedIndexPath = self.tableview.indexPathForSelectedRow {
-            destinationVC.event = DataStore.shared.getEvent(index: selectedIndexPath.row)
-            // Set the delegate (self = this object).
-            destinationVC.delegate = self
+        if segue.identifier == "pastEventsSegue" {
+            if let destinationVC = segue.destination as? EventDetailViewController,
+                let selectedIndexPath = self.pastEventView.indexPathForSelectedRow {
+                destinationVC.event = self.pastEventsList[selectedIndexPath.row]
+                // Set the delegate (self = this object).
+                destinationVC.delegate = self
+            }
+        }
+        else {
+            if let destinationVC = segue.destination as? EventDetailViewController,
+                let selectedIndexPath = self.upcomingEventView.indexPathForSelectedRow {
+                destinationVC.event = self.upcomingEventsList[selectedIndexPath.row]
+                // Set the delegate (self = this object).
+                destinationVC.delegate = self
+            }
         }
     }
-
 }

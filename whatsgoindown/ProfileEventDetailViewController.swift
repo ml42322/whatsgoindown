@@ -137,23 +137,19 @@ class ProfileEventDetailViewController: UIViewController, GMSAutocompleteResults
                 self.ref.child("events/\(event.id)/eventLongitude").setValue(coordinates.longitude.description)
                 event.eventLongitude = coordinates.longitude.description
             }
-        /*
-        let OKAction = UIAlertAction(title: "Update Event", style: UIAlertActionStyle.destructive) { (action:UIAlertAction) in
-            // delete old event and make a new one
-            DataStore.shared.deleteEvent(event: self.event);
-            DataStore.shared.addEvent(event: self.event)
-
-            if ((self.delegate as? ProfileViewController) != nil){
-                self.performSegue(withIdentifier: "backToProfile", sender: self)
+            
+            //add the alert pop up
+            self.alertController = UIAlertController(title: "Update Event", message: "Event is updated", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let cancelAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in
+                print("OK Button Pressed");
+                if ((self.delegate as? ProfileViewController) != nil){
+                    self.performSegue(withIdentifier: "backToProfile", sender: self)
+                }
             }
+            self.alertController!.addAction(cancelAction)
+            self.present(self.alertController!, animated: true, completion:nil)
         }
-        self.alertController!.addAction(OKAction)
-        self.present(self.alertController!, animated: true, completion:nil)
-        print("Event Updated")
-        self.performSegue(withIdentifier: "backToProfile", sender: self)
-             */
-        }
- 
     }
     
     @IBAction func deleteBtn(_ sender: Any) {
