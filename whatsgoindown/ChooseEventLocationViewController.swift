@@ -68,9 +68,15 @@ class ChooseEventLocationViewController: UIViewController, GMSMapViewDelegate, C
                 else{
                     return
             }
+            if self.searchController?.searchBar.text != "" {
+                self.CL = coordinate
+
+                self.performSegue(withIdentifier: "toCreateEventPage", sender: self)
+            }else{
             self.address = (geoaddress.lines?.joined(separator: "\n"))!
             self.CL = coordinate
             self.performSegue(withIdentifier: "toCreateEventPage", sender: self)
+            }
         }
  
     }
@@ -106,6 +112,8 @@ class ChooseEventLocationViewController: UIViewController, GMSMapViewDelegate, C
     func resultsController(_ resultsController: GMSAutocompleteResultsViewController,
                            didAutocompleteWith place: GMSPlace) {
         searchController?.isActive = false
+        searchController?.searchBar.text = place.formattedAddress!
+
         address = place.formattedAddress!
  
         //turn address into coordinate
